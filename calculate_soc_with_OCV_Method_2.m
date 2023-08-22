@@ -15,8 +15,8 @@ data = dlmread(filename);
      standard_ocv = data(:, 1);
      soc = data(:, 2);
     
-measured_ocv_value=input("Enter your measured value: ");
-     while  measured_ocv_value < 27.5 || measured_ocv_value > 42
+measured_ocv_value=input("Enter the ocv value of your battery: ");
+     while  measured_ocv_value < 27.5 || measured_ocv_value > 42  % Created Standard 
        disp("Invalid value. Please enter a value between 27.5V & 42V.")
        measured_ocv_value=input("Enter the ocv value of your battery: ");
      end
