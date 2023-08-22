@@ -1,11 +1,13 @@
 fprintf("*** By: GUIZENI Oumayma ***\n");
 fprintf("*** Date: 03-06-2023 ***\n");
 pause(3);
+fprintf("\n");
 
+fprintf("Note that Frequency & Impedance are inversely proportional\n");
 fprintf("\n");
 % Get measured impedance data from the user
-measuredFrequency = input('Enter the measured frequency values (in vector): ');
-measuredImpedance = input('Enter the measured impedance values (in vector): ');
+measuredFrequency = input('Enter the measured frequency values in Hz(example: 0.0012),[in vector]: ');
+measuredImpedance = input('Enter the measured impedance values(example: 1.3)[in vector]: ');
 
 % Find the index of the lowest frequency
 [~, lowestFrequencyIndex] = min(measuredFrequency);
