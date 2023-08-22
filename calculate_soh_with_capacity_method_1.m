@@ -10,17 +10,16 @@ rated_capacity = input('Enter the capacity specified by the manufacturer in mAh:
 fprintf('Hint: Enter actual_capacity or press enter \n');
 actual_capacity = input('Enter the actual capacity of your battery in mAh: '); % mAh 
 
-if actual_capacity < 1000 || actual_capacity > 10000
-    disp('This is not correct enter a value between 1000mAh and 10000mAh');
-    disp('Hint: if you cannot calculate the actual capacity press enter');
+if actual_capacity > rated_capacity
+    disp('This is not correct rated_capacity should be greater then the actual_capacity ');
     actual_capacity = input('Enter the actual capacity of your battery in mAh: '); % mAh
 end
 % calculate manually the actual_capacity
-if isempty(actual_capacity)
-    Current = input('Enter the current value in mA: '); % A
-    Time = input('Enter the actual time in ms: '); % s
-    actual_capacity = Current * Time;
-end
+% if isempty(actual_capacity)
+%     Current = input('Enter the current value in mA: '); % A
+%     Time = input('Enter the actual time in ms: '); % s
+%     actual_capacity = Current * Time;
+% end
 
 % Estimate SOC
 soh_estimated = (actual_capacity / rated_capacity) * 100;
