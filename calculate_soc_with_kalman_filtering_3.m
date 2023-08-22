@@ -49,7 +49,7 @@ P = P_initial;     % Estimate uncertainty
 % Kalman Filtering
     % Prediction
     SOC_estimate = initialSOC + currentMeasurement * time;
-    P = P + Q;
+    P = P + SOC_estimate;
     
     % Measurement Update
     K = P / (P + R);
